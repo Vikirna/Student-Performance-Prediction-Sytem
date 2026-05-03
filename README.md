@@ -1,5 +1,5 @@
 # 🎓 Student Performance Prediction System
-### Software Engineering Lab — Experiment 15
+### Software Engineering 
 **Team:** Vikirna Majumdar & Akanksha Semwal
 
 ---
