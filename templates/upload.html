@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+{% block title %}Upload Dataset — SPPS{% endblock %}
+{% block content %}
+
+<h2 style="margin-bottom:20px">📤 Upload Student Dataset</h2>
+
+<div class="row">
+  <div class="col-half">
+    <div class="card">
+      <div class="card-title">Upload CSV File</div>
+      <form method="POST" enctype="multipart/form-data">
+        <div class="upload-zone" onclick="document.getElementById('csv_file').click()">
+          <div style="font-size:48px">📂</div>
+          <p style="margin-top:12px;font-weight:600;color:#1A3C5E">
+            Click to select CSV file
+          </p>
+          <p style="color:#6c757d;font-size:13px;margin-top:4px" id="file-name">
+            No file chosen
+          </p>
+          <input type="file" id="csv_file" name="csv_file"
+                 accept=".csv" style="display:none"
+                 onchange="document.getElementById('file-name').textContent=this.files[0].name">
+        </div>
+        <button class="btn btn-primary" type="submit"
+                style="margin-top:20px;border-radius:8px;width:100%">
+          🚀 Run Batch Prediction
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <div class="col-half">
+    <div class="card">
+      <div class="card-title">📋 Required CSV Format</div>
+      <p style="font-size:13px;color:#6c757d;margin-bottom:14px">
+        Your CSV must contain the following columns:
+      </p>
+      <table>
+        <tr><th>Column</th><th>Type</th><th>Example</th></tr>
+        <tr><td>student_id</td><td>String</td><td>S001</td></tr>
+        <tr><td>name</td><td>String</td><td>Akanksha Semwal</td></tr>
+        <tr><td>attendance</td><td>Float (0–100)</td><td>87.5</td></tr>
+        <tr><td>marks</td><td>Float (0–100)</td><td>72.0</td></tr>
+        <tr><td>study_hours</td><td>Float</td><td>4.5</td></tr>
+        <tr><td>assignments</td><td>Float (0–100)</td><td>80.0</td></tr>
+      </table>
+      <div style="background:#e3f2fd;border-radius:8px;padding:12px;margin-top:16px;font-size:13px">
+        💡 Missing values are automatically filled with column means.<br>
+        Extra columns are ignored safely.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title">📥 Sample CSV Content</div>
+      <pre style="background:#f5f7fa;padding:14px;border-radius:8px;font-size:12px;
+                  overflow-x:auto;border:1px solid #e0e6ef">student_id,name,attendance,marks,study_hours,assignments
+S001,Alice Johnson,92,85,5.0,90
+S002,Bob Smith,55,40,1.0,45
+S003,Carol White,78,68,3.5,72
+S004,David Brown,65,52,2.5,60
+S005,Eva Davis,95,91,6.5,95</pre>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

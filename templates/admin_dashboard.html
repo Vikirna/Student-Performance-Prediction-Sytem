@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% block title %}Admin Panel — SPPS{% endblock %}
+{% block content %}
+
+<h2 style="margin-bottom:20px">⚙️ Admin Panel</h2>
+
+<div class="row">
+
+  <!-- Model Management -->
+  <div class="col-half">
+    <div class="card">
+      <div class="card-title">🤖 Model Management</div>
+      {% if stats %}
+        <div class="stat-grid" style="margin-bottom:16px">
+          <div class="stat-card">
+            <div class="val" style="font-size:24px">{{ stats.best_model.split()[0] }}</div>
+            <div class="lbl">Best Model</div>
+          </div>
+          <div class="stat-card">
+            <div class="val" style="font-size:28px">{{ stats.best_accuracy }}%</div>
+            <div class="lbl">Test Accuracy</div>
+          </div>
+        </div>
+        <table style="margin-bottom:16px">
+          <tr><th>Algorithm</th><th>Accuracy</th><th>CV Accuracy</th></tr>
+          {% for name, res in stats.all_results.items() %}
+          <tr>
+            <td>{{ name }}</td>
+            <td>
+              <div class="conf-bar-wrap" style="width:80px;display:inline-block;vertical-align:middle">
+                <div class="conf-bar" style="width:{{ res.accuracy }}%"></div>
+              </div>
+              {{ res.accuracy }}%
+            </td>
+            <td>{{ res.cv_accuracy }}%</td>
+          </tr>
+          {% endfor %}
+        </table>
+      {% else %}
+        <p style="color:#6c757d;margin-bottom:16px">No model trained yet.</p>
+      {% endif %}
+
+      <form method="POST" action="/train">
+        <button class="btn btn-primary" type="submit">
+          🔄 Train / Retrain Model
+        </button>
+      </form>
+
+      {% if cm_chart %}
+      <div style="margin-top:20px">
+        <p style="font-weight:600;margin-bottom:8px">Confusion Matrix</p>
+        <img src="data:image/png;base64,{{ cm_chart }}"
+             style="width:100%;border-radius:8px;border:1px solid #e0e6ef"
+             alt="Confusion Matrix">
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- User Management -->
+  <div class="col-half">
+    <div class="card">
+      <div class="card-title">👥 Registered Users</div>
+      <table>
+        <tr><th>Name</th><th>Role</th><th>Email</th></tr>
+        {% for email, u in users.items() %}
+        <tr>
+          <td>{{ u.name }}</td>
+          <td>
+            {% set rc = 'badge-excellent' if u.role == 'admin' else ('badge-average' if u.role == 'teacher' else 'badge-atrisk') %}
+            <span class="badge {{ rc }}">{{ u.role|capitalize }}</span>
+          </td>
+          <td style="font-size:12px;color:#6c757d">{{ email }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="card-title">📊 System Metrics</div>
+      <table>
+        <tr><td>Total Users</td>
+            <td><strong>{{ users | length }}</strong></td></tr>
+        <tr><td>Best Model Accuracy</td>
+            <td><strong>{{ stats.best_accuracy ~ '%' if stats else 'N/A' }}</strong></td></tr>
+        <tr><td>At Risk Threshold</td>
+            <td><strong>Category = "At Risk"</strong></td></tr>
+        <tr><td>Training Dataset</td>
+            <td><strong>data/student_data.csv</strong></td></tr>
+        <tr><td>Features Used</td>
+            <td><strong>attendance, marks, study_hours, assignments</strong></td></tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <div class="card-title">🔗 Quick Links</div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <a href="/upload" class="btn btn-primary btn-sm">Upload CSV</a>
+        <a href="/teacher" class="btn btn-sm" style="background:#6f42c1;color:#fff">
+          View Teacher View</a>
+        <a href="/download_report" class="btn btn-sm"
+           style="background:#6c757d;color:#fff">Download Report</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

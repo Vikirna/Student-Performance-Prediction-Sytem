@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% block title %}Teacher Dashboard — SPPS{% endblock %}
+{% block content %}
+
+<h2 style="margin-bottom:20px">Teacher Dashboard 👩‍🏫</h2>
+
+{% if not results %}
+<div class="card" style="text-align:center;padding:48px">
+  <p style="font-size:18px;color:#6c757d;margin-bottom:16px">
+    No batch predictions yet. Upload a student CSV to get started.
+  </p>
+  <a href="/upload" class="btn btn-primary">Upload Dataset</a>
+</div>
+{% else %}
+
+<!-- Summary Stats -->
+<div class="stat-grid">
+  {% set total     = results | length %}
+  {% set excellent = results | selectattr('category','equalto','Excellent') | list | length %}
+  {% set average   = results | selectattr('category','equalto','Average')   | list | length %}
+  {% set atrisk    = results | selectattr('category','equalto','At Risk')   | list | length %}
+  <div class="stat-card"><div class="val">{{ total }}</div><div class="lbl">Total Students</div></div>
+  <div class="stat-card"><div class="val" style="color:#28A745">{{ excellent }}</div><div class="lbl">Excellent</div></div>
+  <div class="stat-card"><div class="val" style="color:#e09800">{{ average }}</div><div class="lbl">Average</div></div>
+  <div class="stat-card"><div class="val" style="color:#DC3545">{{ atrisk }}</div><div class="lbl">At Risk</div></div>
+</div>
+
+<div class="row">
+  <!-- Bar chart -->
+  <div class="col-half">
+    <div class="card">
+      <div class="card-title">📊 Class Distribution</div>
+      {% if bar_chart %}
+      <img src="data:image/png;base64,{{ bar_chart }}" style="width:100%;border-radius:8px" alt="Bar Chart">
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- At Risk Panel -->
+  <div class="col-half">
+    <div class="card">
+      <div class="card-title" style="color:#DC3545">⚠️ At Risk Students ({{ atrisk }})</div>
+      {% if at_risk %}
+      <table>
+        <tr><th>Name / ID</th><th>Confidence</th></tr>
+        {% for r in at_risk %}
+        <tr>
+          <td>{{ r.get('name', r.get('student_id','?')) }}</td>
+          <td>
+            <div class="conf-bar-wrap" style="width:100px;display:inline-block">
+              <div class="conf-bar" style="width:{{ r.get('confidence',0) }}%;background:#DC3545"></div>
+            </div>
+            {{ r.get('confidence',0) }}%
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+      {% else %}
+      <p style="color:#28A745">✅ No At Risk students in this batch!</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<!-- Full Results Table -->
+<div class="card">
+  <div class="card-title">📋 Full Batch Results</div>
+  <div style="display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap">
+    <button class="btn btn-sm btn-primary" onclick="filterTable('all')">All</button>
+    <button class="btn btn-sm btn-success" onclick="filterTable('Excellent')">Excellent</button>
+    <button class="btn btn-sm btn-warning" onclick="filterTable('Average')">Average</button>
+    <button class="btn btn-sm btn-danger" onclick="filterTable('At Risk')">At Risk</button>
+    <a href="/download_report" class="btn btn-sm" style="background:#6c757d;color:#fff;margin-left:auto">⬇ Download CSV</a>
+  </div>
+  <div style="overflow-x:auto">
+  <table id="results-table">
+    <tr>
+      <th>ID</th><th>Name</th><th>Attendance %</th>
+      <th>Marks</th><th>Study Hrs</th><th>Assignments</th>
+      <th>Category</th><th>Confidence</th>
+    </tr>
+    {% for r in results %}
+    {% set cat = r.get('category','') %}
+    {% set bc  = 'badge-excellent' if cat == 'Excellent' else ('badge-average' if cat == 'Average' else 'badge-atrisk') %}
+    <tr data-cat="{{ cat }}">
+      <td>{{ r.get('student_id','—') }}</td>
+      <td>{{ r.get('name','—') }}</td>
+      <td>{{ r.get('attendance','—') }}</td>
+      <td>{{ r.get('marks','—') }}</td>
+      <td>{{ r.get('study_hours','—') }}</td>
+      <td>{{ r.get('assignments','—') }}</td>
+      <td><span class="badge {{ bc }}">{{ cat }}</span></td>
+      <td>{{ r.get('confidence','—') }}%</td>
+    </tr>
+    {% endfor %}
+  </table>
+  </div>
+</div>
+
+<div style="text-align:center;margin-top:8px">
+  <a href="/upload" class="btn btn-primary">Upload New Dataset</a>
+</div>
+
+{% endif %}
+
+<script>
+function filterTable(cat) {
+  document.querySelectorAll('#results-table tr[data-cat]').forEach(row => {
+    row.style.display = (cat === 'all' || row.dataset.cat === cat) ? '' : 'none';
+  });
+}
+</script>
+{% endblock %}

@@ -1,0 +1,146 @@
+{% extends "base.html" %}
+{% block title %}Student Dashboard — SPPS{% endblock %}
+{% block content %}
+
+<h2 style="margin-bottom:20px;color:#1A3C5E">
+  Welcome back, {{ user.name }} 👋
+</h2>
+
+{% if category == 'At Risk' %}
+<div class="at-risk-banner">
+  <span class="icon">⚠️</span>
+  <div>
+    <strong>Early Warning Alert</strong> — Your current data suggests you may be At Risk.<br>
+    <small>Please review the recommendations below and speak to your academic advisor.</small>
+  </div>
+</div>
+{% endif %}
+
+<div class="stat-grid">
+  <div class="stat-card">
+    <div class="val">{{ user.attendance }}%</div>
+    <div class="lbl">Attendance</div>
+  </div>
+  <div class="stat-card">
+    <div class="val">{{ user.marks }}</div>
+    <div class="lbl">Average Marks</div>
+  </div>
+  <div class="stat-card">
+    <div class="val">{{ user.study_hours }}h</div>
+    <div class="lbl">Study Hours/Day</div>
+  </div>
+  <div class="stat-card">
+    <div class="val">{{ user.assignments }}%</div>
+    <div class="lbl">Assignment Score</div>
+  </div>
+</div>
+
+<div class="row">
+  <!-- Prediction Card -->
+  <div class="col-half">
+    <div class="card pred-card">
+      <div class="card-title">🎯 Performance Prediction</div>
+      {% if category %}
+        {% set badge_class = 'badge-excellent' if category == 'Excellent' else ('badge-average' if category == 'Average' else 'badge-atrisk') %}
+        {% set emoji = '🌟' if category == 'Excellent' else ('📊' if category == 'Average' else '⚠️') %}
+        <div style="margin:12px 0">
+          <span class="badge {{ badge_class }}" style="font-size:16px;padding:8px 24px">
+            {{ emoji }} {{ category }}
+          </span>
+        </div>
+        <p style="color:#6c757d;font-size:14px;margin:10px 0 6px">Model Confidence</p>
+        <div class="conf-bar-wrap" style="max-width:280px;margin:0 auto">
+          <div class="conf-bar" style="width:{{ confidence }}%"></div>
+        </div>
+        <p style="margin-top:6px;font-weight:700;color:#2196F3">{{ confidence }}%</p>
+
+        {% if category == 'At Risk' %}
+        <div style="background:#fff3cd;border-radius:8px;padding:14px;margin-top:16px;text-align:left">
+          <b>📋 Recommended Actions:</b>
+          <ul style="margin-top:8px;padding-left:20px;font-size:13px;color:#856404;line-height:1.8">
+            <li>Increase daily study hours to at least 4–5 hours.</li>
+            <li>Attend all scheduled classes — aim for 85%+ attendance.</li>
+            <li>Submit all pending assignments immediately.</li>
+            <li>Schedule a meeting with your academic advisor.</li>
+            <li>Join peer study groups for difficult subjects.</li>
+          </ul>
+        </div>
+        {% elif category == 'Excellent' %}
+        <div style="background:#d4edda;border-radius:8px;padding:14px;margin-top:16px">
+          <b>🎉 Great job!</b> Keep up the excellent work!
+        </div>
+        {% else %}
+        <div style="background:#e3f2fd;border-radius:8px;padding:14px;margin-top:16px">
+          <b>📈 Keep going!</b> A little more effort will push you to Excellent.
+        </div>
+        {% endif %}
+      {% else %}
+        <p style="color:#dc3545">⚠️ No model trained yet. Contact Admin.</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <!-- Grade Trend Chart -->
+  <div class="col-half">
+    <div class="card">
+      <div class="card-title">📈 Grade Trend</div>
+      {% if trend_chart %}
+        <img src="data:image/png;base64,{{ trend_chart }}"
+             style="width:100%;border-radius:8px" alt="Grade Trend Chart">
+      {% else %}
+        <p style="color:#6c757d">No trend data available.</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<!-- Try Custom Prediction -->
+<div class="card">
+  <div class="card-title">🔮 Try a Custom Prediction</div>
+  <div class="row">
+    <div class="col-half">
+      <div class="form-group">
+        <label>Attendance (%)</label>
+        <input type="number" id="c_att" min="0" max="100" value="{{ user.attendance }}" step="0.1">
+      </div>
+      <div class="form-group">
+        <label>Average Marks</label>
+        <input type="number" id="c_mrk" min="0" max="100" value="{{ user.marks }}" step="0.1">
+      </div>
+    </div>
+    <div class="col-half">
+      <div class="form-group">
+        <label>Study Hours / Day</label>
+        <input type="number" id="c_hrs" min="0" max="24" value="{{ user.study_hours }}" step="0.1">
+      </div>
+      <div class="form-group">
+        <label>Assignment Score (%)</label>
+        <input type="number" id="c_asgn" min="0" max="100" value="{{ user.assignments }}" step="0.1">
+      </div>
+    </div>
+  </div>
+  <button class="btn btn-primary" onclick="runCustomPredict()">Run Prediction</button>
+  <div id="custom-result" style="margin-top:16px;font-size:16px;font-weight:700"></div>
+</div>
+
+<script>
+async function runCustomPredict() {
+  const body = {
+    attendance:   parseFloat(document.getElementById('c_att').value),
+    marks:        parseFloat(document.getElementById('c_mrk').value),
+    study_hours:  parseFloat(document.getElementById('c_hrs').value),
+    assignments:  parseFloat(document.getElementById('c_asgn').value),
+  };
+  const res  = await fetch('/predict_single', {
+    method: 'POST',
+    headers: {'Content-Type':'application/json'},
+    body: JSON.stringify(body)
+  });
+  const data = await res.json();
+  const col  = data.category === 'Excellent' ? '#28A745'
+             : data.category === 'Average'   ? '#e09800' : '#DC3545';
+  document.getElementById('custom-result').innerHTML =
+    `Result: <span style="color:${col}">${data.category}</span> &nbsp;|&nbsp; Confidence: ${data.confidence}%`;
+}
+</script>
+{% endblock %}

@@ -1,0 +1,501 @@
+student_id,name,attendance,marks,study_hours,assignments,category
+S001,Student_1,56.2,75.9,1.9,66.3,Average
+S002,Student_2,96.6,62.9,4.6,63.5,Excellent
+S003,Student_3,81.2,44.8,7.0,31.8,Average
+S004,Student_4,71.9,85.1,6.0,53.9,Excellent
+S005,Student_5,40.9,74.8,6.5,56.6,Average
+S006,Student_6,40.9,33.0,5.4,57.9,At Risk
+S007,Student_7,34.1,92.9,5.7,70.6,Excellent
+S008,Student_8,90.6,85.8,6.9,67.4,Excellent
+S009,Student_9,72.1,96.0,2.4,72.6,Excellent
+S010,Student_10,79.6,78.1,4.2,83.5,Excellent
+S011,Student_11,31.4,69.1,2.2,86.9,Average
+S012,Student_12,97.9,53.5,7.9,80.3,Excellent
+S013,Student_13,88.3,94.6,7.6,96.9,Excellent
+S014,Student_14,44.9,89.3,0.8,31.3,Average
+S015,Student_15,42.7,23.6,5.8,43.7,At Risk
+S016,Student_16,42.8,22.1,7.4,30.5,At Risk
+S017,Student_17,51.3,50.1,1.9,75.3,Average
+S018,Student_18,66.7,84.8,4.8,92.9,Excellent
+S019,Student_19,60.2,99.0,7.4,47.0,Excellent
+S020,Student_20,50.4,32.0,0.8,94.9,At Risk
+S021,Student_21,72.8,67.5,5.7,34.2,Excellent
+S022,Student_22,39.8,50.5,2.7,95.4,Average
+S023,Student_23,50.5,97.6,7.4,54.6,Excellent
+S024,Student_24,55.6,87.4,7.8,37.1,Excellent
+S025,Student_25,61.9,87.1,7.6,64.0,Excellent
+S026,Student_26,85.0,57.5,4.1,48.0,Average
+S027,Student_27,44.0,53.2,7.0,49.9,Average
+S028,Student_28,66.0,41.9,6.8,51.5,Average
+S029,Student_29,71.5,24.5,2.9,86.2,Average
+S030,Student_30,33.3,89.2,6.7,67.7,Excellent
+S031,Student_31,72.5,85.0,0.8,51.8,Average
+S032,Student_32,41.9,100.0,5.0,72.7,Excellent
+S033,Student_33,34.6,99.7,2.2,80.1,Average
+S034,Student_34,96.4,64.4,1.4,49.1,Average
+S035,Student_35,97.6,81.5,1.1,58.9,Excellent
+S036,Student_36,86.6,95.6,5.7,38.5,Excellent
+S037,Student_37,51.3,88.0,3.0,42.7,Average
+S038,Student_38,36.8,39.8,5.9,77.7,Average
+S039,Student_39,77.9,56.0,1.0,42.7,Average
+S040,Student_40,60.8,30.3,2.9,66.8,At Risk
+S041,Student_41,38.5,96.3,4.5,79.6,Excellent
+S042,Student_42,64.7,68.5,6.4,37.5,Excellent
+S043,Student_43,32.4,38.3,2.9,69.7,At Risk
+S044,Student_44,93.7,73.7,5.2,48.0,Excellent
+S045,Student_45,48.1,69.5,7.1,97.4,Excellent
+S046,Student_46,76.4,48.7,5.1,63.8,Average
+S047,Student_47,51.8,29.1,2.2,86.4,At Risk
+S048,Student_48,66.4,73.7,0.7,68.5,Average
+S049,Student_49,68.3,61.6,7.0,33.0,Excellent
+S050,Student_50,42.9,81.8,0.7,74.3,Average
+S051,Student_51,97.9,61.6,7.1,96.6,Excellent
+S052,Student_52,84.3,88.2,4.5,72.1,Excellent
+S053,Student_53,95.8,64.2,7.5,87.3,Excellent
+S054,Student_54,92.6,64.9,6.5,91.9,Excellent
+S055,Student_55,71.9,90.1,8.0,46.0,Excellent
+S056,Student_56,94.5,52.3,3.1,44.8,Average
+S057,Student_57,36.2,30.7,6.3,72.8,Average
+S058,Student_58,43.7,22.3,3.5,58.8,At Risk
+S059,Student_59,33.2,80.4,4.1,88.8,Average
+S060,Student_60,52.8,69.6,5.2,93.0,Excellent
+S061,Student_61,57.2,76.3,7.1,54.7,Excellent
+S062,Student_62,49.0,37.0,7.9,46.6,Average
+S063,Student_63,88.0,30.9,6.3,84.6,Average
+S064,Student_64,55.0,21.2,3.6,49.2,At Risk
+S065,Student_65,49.7,48.0,3.7,87.6,Average
+S066,Student_66,68.0,67.2,6.0,59.7,Excellent
+S067,Student_67,39.9,51.4,2.3,76.7,At Risk
+S068,Student_68,86.2,55.0,1.3,36.7,Average
+S069,Student_69,35.2,92.3,3.2,73.7,Average
+S070,Student_70,99.1,47.9,2.7,61.6,Average
+S071,Student_71,84.1,61.1,2.7,71.1,Average
+S072,Student_72,43.9,82.7,2.3,41.8,Average
+S073,Student_73,30.4,51.7,0.8,81.6,At Risk
+S074,Student_74,87.1,69.8,0.6,90.4,Average
+S075,Student_75,79.5,89.0,7.9,45.2,Excellent
+S076,Student_76,81.0,96.0,3.7,36.7,Excellent
+S077,Student_77,84.0,31.8,3.4,31.7,Average
+S078,Student_78,35.2,94.1,5.6,74.9,Excellent
+S079,Student_79,55.1,59.4,2.1,72.5,Average
+S080,Student_80,38.1,40.7,7.6,68.3,Average
+S081,Student_81,90.4,56.7,6.4,46.2,Excellent
+S082,Student_82,73.6,98.4,1.2,57.4,Excellent
+S083,Student_83,53.2,59.4,3.6,71.6,Average
+S084,Student_84,34.4,46.3,7.1,64.8,Average
+S085,Student_85,51.8,70.7,7.6,99.1,Excellent
+S086,Student_86,52.8,39.2,4.0,39.6,At Risk
+S087,Student_87,81.1,26.1,5.1,78.7,Average
+S088,Student_88,74.6,30.3,1.8,58.3,At Risk
+S089,Student_89,92.1,30.2,7.9,60.0,Excellent
+S090,Student_90,63.1,32.2,2.2,80.2,At Risk
+S091,Student_91,38.4,31.1,7.6,78.5,Average
+S092,Student_92,79.9,71.3,5.4,99.4,Excellent
+S093,Student_93,83.3,34.6,5.1,39.0,Average
+S094,Student_94,69.3,47.7,4.3,37.3,Average
+S095,Student_95,84.0,91.7,2.2,80.7,Excellent
+S096,Student_96,64.6,57.9,1.8,70.5,Average
+S097,Student_97,66.6,73.4,2.2,49.2,Average
+S098,Student_98,59.9,33.8,1.9,35.6,At Risk
+S099,Student_99,31.8,35.4,6.3,36.0,At Risk
+S100,Student_100,37.6,23.3,3.1,92.6,At Risk
+S101,Student_101,32.2,33.5,0.9,43.4,At Risk
+S102,Student_102,74.5,42.3,7.8,52.6,Average
+S103,Student_103,52.0,34.2,7.1,45.9,Average
+S104,Student_104,65.6,27.1,7.5,54.8,Average
+S105,Student_105,93.5,29.7,8.0,34.9,Average
+S106,Student_106,47.5,56.9,1.8,66.3,Average
+S107,Student_107,58.7,36.5,3.5,34.7,At Risk
+S108,Student_108,82.9,49.1,6.2,86.0,Excellent
+S109,Student_109,46.0,60.3,5.7,46.4,Average
+S110,Student_110,35.4,75.2,1.7,67.8,Average
+S111,Student_111,50.3,23.1,6.6,91.6,Average
+S112,Student_112,41.3,84.0,2.2,75.6,Average
+S113,Student_113,95.1,70.2,2.2,67.3,Excellent
+S114,Student_114,86.6,26.5,4.5,52.7,Average
+S115,Student_115,74.3,89.9,4.9,53.3,Excellent
+S116,Student_116,91.0,93.7,4.9,76.9,Excellent
+S117,Student_117,86.3,24.9,1.2,99.6,Average
+S118,Student_118,43.1,42.2,7.1,76.3,Average
+S119,Student_119,92.5,84.5,2.5,69.0,Excellent
+S120,Student_120,67.8,79.9,1.5,81.1,Average
+S121,Student_121,86.5,34.8,7.2,62.6,Average
+S122,Student_122,92.7,36.7,7.7,34.2,Excellent
+S123,Student_123,52.3,49.6,7.0,69.4,Average
+S124,Student_124,37.7,58.8,6.6,97.0,Average
+S125,Student_125,46.0,69.5,5.4,42.3,Average
+S126,Student_126,59.9,49.5,4.6,78.3,Average
+S127,Student_127,87.3,57.0,1.2,44.1,Average
+S128,Student_128,90.3,79.8,3.6,67.5,Excellent
+S129,Student_129,30.5,22.9,3.3,36.8,At Risk
+S130,Student_130,65.8,40.2,2.4,61.5,Average
+S131,Student_131,59.2,77.1,5.9,82.9,Excellent
+S132,Student_132,45.5,91.6,4.2,54.3,Excellent
+S133,Student_133,38.4,60.9,1.1,76.5,At Risk
+S134,Student_134,53.6,62.6,2.2,85.7,Average
+S135,Student_135,96.0,28.6,5.6,94.9,Average
+S136,Student_136,52.6,55.8,1.1,46.4,At Risk
+S137,Student_137,66.3,62.6,6.9,58.0,Excellent
+S138,Student_138,79.2,39.4,4.2,40.7,Average
+S139,Student_139,55.5,41.5,4.1,99.5,Average
+S140,Student_140,98.0,50.2,4.9,94.9,Excellent
+S141,Student_141,97.4,21.6,6.7,67.8,Average
+S142,Student_142,47.6,45.8,3.1,88.9,Average
+S143,Student_143,64.8,36.9,5.6,66.5,Average
+S144,Student_144,51.1,46.2,4.7,73.7,Average
+S145,Student_145,49.9,29.6,2.5,36.2,At Risk
+S146,Student_146,32.6,91.2,7.1,82.9,Excellent
+S147,Student_147,72.7,67.5,6.5,38.9,Excellent
+S148,Student_148,65.2,74.3,5.4,87.8,Excellent
+S149,Student_149,33.6,83.1,6.9,84.7,Excellent
+S150,Student_150,49.5,59.9,7.0,79.6,Average
+S151,Student_151,93.6,27.0,5.8,32.5,Average
+S152,Student_152,46.8,63.0,6.8,51.2,Average
+S153,Student_153,40.1,66.9,5.7,48.4,Average
+S154,Student_154,64.3,79.6,5.6,55.2,Excellent
+S155,Student_155,99.0,54.5,5.1,36.1,Excellent
+S156,Student_156,46.9,30.2,6.1,95.6,Average
+S157,Student_157,77.0,42.7,1.7,68.8,Average
+S158,Student_158,83.3,49.0,7.1,51.4,Excellent
+S159,Student_159,46.6,71.7,7.0,57.8,Excellent
+S160,Student_160,81.0,65.7,0.7,61.3,Average
+S161,Student_161,55.7,48.5,6.7,72.0,Average
+S162,Student_162,74.3,98.9,1.5,66.1,Excellent
+S163,Student_163,74.3,68.5,3.0,94.4,Excellent
+S164,Student_164,67.5,39.0,6.1,64.8,Average
+S165,Student_165,36.3,28.1,1.7,99.5,At Risk
+S166,Student_166,88.5,32.2,6.6,89.6,Excellent
+S167,Student_167,52.5,39.7,6.7,44.6,Average
+S168,Student_168,43.1,32.9,4.3,95.1,Average
+S169,Student_169,32.9,34.9,0.5,38.1,At Risk
+S170,Student_170,71.4,42.8,2.7,87.2,Average
+S171,Student_171,77.4,33.9,5.1,56.6,Average
+S172,Student_172,31.2,91.7,7.9,91.5,Excellent
+S173,Student_173,65.8,26.4,5.2,90.8,Average
+S174,Student_174,45.9,62.0,2.4,86.4,Average
+S175,Student_175,75.2,52.8,5.3,85.3,Average
+S176,Student_176,42.2,98.6,4.5,51.3,Excellent
+S177,Student_177,78.4,29.0,6.3,35.7,Average
+S178,Student_178,57.1,51.8,1.3,58.2,At Risk
+S179,Student_179,95.6,97.6,6.2,42.1,Excellent
+S180,Student_180,39.6,89.2,4.6,78.6,Excellent
+S181,Student_181,53.9,85.4,7.7,54.2,Excellent
+S182,Student_182,37.9,40.6,3.1,98.3,At Risk
+S183,Student_183,94.7,33.7,5.2,74.9,Average
+S184,Student_184,91.4,73.5,7.5,87.6,Excellent
+S185,Student_185,48.1,94.4,1.3,39.3,Average
+S186,Student_186,76.2,64.5,7.5,90.3,Excellent
+S187,Student_187,87.2,65.7,5.7,94.6,Excellent
+S188,Student_188,68.9,42.4,1.0,64.1,At Risk
+S189,Student_189,67.1,81.6,2.8,72.4,Excellent
+S190,Student_190,46.9,35.0,5.8,83.5,Average
+S191,Student_191,36.5,45.9,1.0,42.2,At Risk
+S192,Student_192,92.8,54.0,4.9,65.2,Excellent
+S193,Student_193,93.0,60.6,3.1,57.9,Average
+S194,Student_194,74.3,39.4,5.2,40.2,Average
+S195,Student_195,53.7,29.2,0.8,55.7,At Risk
+S196,Student_196,54.4,68.8,7.0,34.8,Excellent
+S197,Student_197,80.8,43.1,7.8,31.8,Excellent
+S198,Student_198,92.8,66.5,7.8,39.5,Excellent
+S199,Student_199,92.1,32.3,6.1,97.4,Excellent
+S200,Student_200,84.6,58.5,1.5,68.5,Average
+S201,Student_201,74.9,62.6,6.2,97.6,Excellent
+S202,Student_202,35.9,24.1,0.7,60.3,At Risk
+S203,Student_203,41.3,46.9,0.7,51.8,At Risk
+S204,Student_204,92.9,30.8,2.9,65.4,Average
+S205,Student_205,72.5,25.1,4.2,60.8,Average
+S206,Student_206,30.6,99.2,6.3,37.4,Excellent
+S207,Student_207,37.1,45.8,5.6,74.9,Average
+S208,Student_208,76.4,84.8,3.8,45.1,Excellent
+S209,Student_209,30.4,40.4,2.6,73.4,At Risk
+S210,Student_210,41.3,74.5,8.0,75.5,Excellent
+S211,Student_211,68.4,80.8,3.7,40.6,Excellent
+S212,Student_212,78.4,67.7,3.9,34.3,Average
+S213,Student_213,75.6,57.7,1.7,84.7,Average
+S214,Student_214,45.7,52.9,6.5,62.2,Average
+S215,Student_215,79.9,47.9,5.7,34.1,Average
+S216,Student_216,46.6,94.4,2.2,99.6,Excellent
+S217,Student_217,52.8,86.4,1.1,34.0,Average
+S218,Student_218,82.3,97.2,5.6,78.7,Excellent
+S219,Student_219,75.5,29.9,5.4,98.9,Average
+S220,Student_220,89.4,78.5,2.5,46.7,Excellent
+S221,Student_221,76.0,95.1,7.6,40.0,Excellent
+S222,Student_222,69.8,34.5,1.6,38.5,At Risk
+S223,Student_223,36.6,25.3,3.7,51.2,At Risk
+S224,Student_224,55.7,79.3,7.6,37.1,Excellent
+S225,Student_225,48.6,66.0,3.6,78.5,Average
+S226,Student_226,47.1,87.3,5.3,34.4,Excellent
+S227,Student_227,98.1,31.2,3.5,65.7,Average
+S228,Student_228,57.5,83.6,2.6,99.8,Excellent
+S229,Student_229,92.4,36.1,7.9,87.0,Excellent
+S230,Student_230,74.2,33.1,3.6,73.1,Average
+S231,Student_231,85.6,33.1,7.2,51.4,Average
+S232,Student_232,65.2,85.2,2.2,73.7,Average
+S233,Student_233,70.4,73.2,2.1,66.9,Average
+S234,Student_234,64.5,61.8,0.7,59.8,Average
+S235,Student_235,43.7,48.7,5.4,39.1,Average
+S236,Student_236,80.6,90.2,3.3,92.1,Excellent
+S237,Student_237,49.7,51.4,7.0,61.5,Average
+S238,Student_238,31.7,85.3,4.0,43.6,Average
+S239,Student_239,75.2,55.1,7.8,55.7,Excellent
+S240,Student_240,42.4,50.2,1.9,59.0,At Risk
+S241,Student_241,95.8,57.0,7.0,87.9,Excellent
+S242,Student_242,96.8,44.1,6.3,81.4,Excellent
+S243,Student_243,94.0,79.8,6.3,83.9,Excellent
+S244,Student_244,55.9,60.2,6.8,30.8,Average
+S245,Student_245,31.1,38.6,6.2,59.1,Average
+S246,Student_246,95.0,92.0,5.2,63.7,Excellent
+S247,Student_247,60.0,50.7,1.5,31.3,At Risk
+S248,Student_248,97.7,63.5,0.7,48.2,Average
+S249,Student_249,97.5,92.5,7.4,83.2,Excellent
+S250,Student_250,89.7,69.9,5.1,39.6,Excellent
+S251,Student_251,50.6,29.4,6.5,67.5,Average
+S252,Student_252,57.0,95.2,4.1,45.1,Excellent
+S253,Student_253,89.6,70.2,1.4,30.8,Average
+S254,Student_254,52.2,46.8,1.4,46.9,At Risk
+S255,Student_255,41.9,31.1,5.6,98.3,Average
+S256,Student_256,69.0,83.5,3.7,86.1,Excellent
+S257,Student_257,95.5,69.6,2.0,97.2,Excellent
+S258,Student_258,78.7,62.7,4.2,64.1,Average
+S259,Student_259,69.9,91.5,1.0,37.7,Average
+S260,Student_260,36.8,83.1,4.9,68.4,Average
+S261,Student_261,73.1,32.1,2.5,61.8,Average
+S262,Student_262,99.3,44.9,6.5,89.1,Excellent
+S263,Student_263,39.8,39.9,2.8,36.9,At Risk
+S264,Student_264,66.3,79.5,3.9,64.2,Excellent
+S265,Student_265,91.4,22.7,0.6,40.5,At Risk
+S266,Student_266,81.9,65.6,1.0,52.7,Average
+S267,Student_267,78.8,81.0,3.4,81.6,Excellent
+S268,Student_268,79.2,90.1,4.1,63.3,Excellent
+S269,Student_269,55.2,47.4,5.0,56.3,Average
+S270,Student_270,50.6,85.7,2.7,57.6,Average
+S271,Student_271,86.7,28.9,5.7,62.2,Average
+S272,Student_272,86.7,87.7,7.0,85.0,Excellent
+S273,Student_273,90.7,30.2,6.3,92.4,Average
+S274,Student_274,93.9,51.8,0.8,96.9,Average
+S275,Student_275,65.8,83.8,4.1,85.1,Excellent
+S276,Student_276,65.1,32.0,1.3,52.1,At Risk
+S277,Student_277,85.9,38.3,2.3,78.2,Average
+S278,Student_278,75.5,77.8,7.9,60.6,Excellent
+S279,Student_279,79.1,77.6,1.6,47.8,Average
+S280,Student_280,85.7,71.3,4.2,88.9,Excellent
+S281,Student_281,92.3,75.5,5.1,32.7,Excellent
+S282,Student_282,53.7,63.4,5.8,93.1,Excellent
+S283,Student_283,56.3,40.1,4.7,62.3,Average
+S284,Student_284,36.6,47.7,0.6,74.6,At Risk
+S285,Student_285,70.5,34.5,2.9,76.2,Average
+S286,Student_286,32.5,92.7,4.4,92.7,Excellent
+S287,Student_287,62.6,66.7,1.2,74.6,Average
+S288,Student_288,68.0,52.1,3.1,73.0,Average
+S289,Student_289,50.1,57.0,0.7,34.7,At Risk
+S290,Student_290,71.4,95.8,1.1,66.3,Excellent
+S291,Student_291,32.1,32.3,3.5,40.5,At Risk
+S292,Student_292,32.6,66.9,1.5,81.6,Average
+S293,Student_293,87.6,60.5,4.8,65.9,Excellent
+S294,Student_294,55.2,68.9,5.7,77.6,Excellent
+S295,Student_295,38.9,21.4,6.5,32.9,At Risk
+S296,Student_296,66.6,89.8,2.0,35.9,Average
+S297,Student_297,83.9,94.6,1.8,80.1,Excellent
+S298,Student_298,45.1,65.2,1.3,35.0,At Risk
+S299,Student_299,73.6,75.7,5.3,35.0,Excellent
+S300,Student_300,36.0,93.8,5.8,30.8,Excellent
+S301,Student_301,33.6,76.6,0.7,97.0,Average
+S302,Student_302,67.2,32.2,7.5,81.6,Average
+S303,Student_303,67.8,66.1,0.9,54.7,Average
+S304,Student_304,74.6,68.5,4.6,50.8,Excellent
+S305,Student_305,80.8,53.9,5.8,54.5,Excellent
+S306,Student_306,98.3,78.9,7.0,84.2,Excellent
+S307,Student_307,66.1,94.7,5.9,76.3,Excellent
+S308,Student_308,52.6,94.0,6.5,43.0,Excellent
+S309,Student_309,85.7,56.1,3.0,42.2,Average
+S310,Student_310,49.0,29.1,6.6,36.9,Average
+S311,Student_311,60.7,98.8,1.1,76.2,Excellent
+S312,Student_312,35.5,87.1,7.2,83.5,Excellent
+S313,Student_313,31.8,30.0,4.6,48.6,At Risk
+S314,Student_314,97.4,93.7,6.6,31.5,Excellent
+S315,Student_315,88.5,89.6,3.9,35.8,Excellent
+S316,Student_316,78.7,61.5,5.3,97.8,Excellent
+S317,Student_317,58.6,67.3,4.4,50.7,Average
+S318,Student_318,42.1,51.9,6.0,83.8,Average
+S319,Student_319,41.0,24.4,1.1,73.7,At Risk
+S320,Student_320,47.5,46.8,1.0,56.7,At Risk
+S321,Student_321,68.4,84.2,2.4,44.4,Average
+S322,Student_322,80.0,20.4,1.7,38.5,At Risk
+S323,Student_323,76.2,46.7,7.0,73.1,Excellent
+S324,Student_324,49.6,51.9,2.1,84.2,Average
+S325,Student_325,96.8,63.0,7.8,75.1,Excellent
+S326,Student_326,81.7,93.6,3.0,67.1,Excellent
+S327,Student_327,68.8,47.7,1.9,32.9,Average
+S328,Student_328,72.8,47.8,6.4,97.8,Excellent
+S329,Student_329,59.4,79.0,5.4,85.9,Excellent
+S330,Student_330,47.3,56.2,4.2,50.5,Average
+S331,Student_331,54.9,38.0,4.7,98.6,Average
+S332,Student_332,83.0,56.2,5.9,72.1,Excellent
+S333,Student_333,31.0,31.3,2.2,70.8,At Risk
+S334,Student_334,38.1,34.1,8.0,82.4,Average
+S335,Student_335,33.2,59.9,7.8,86.8,Average
+S336,Student_336,32.9,53.5,5.4,76.0,Average
+S337,Student_337,89.9,93.2,2.0,39.0,Excellent
+S338,Student_338,79.3,49.0,5.6,53.7,Average
+S339,Student_339,63.2,66.4,1.0,95.0,Average
+S340,Student_340,36.8,70.6,0.7,45.7,At Risk
+S341,Student_341,64.4,21.0,2.4,56.1,At Risk
+S342,Student_342,63.1,73.1,4.0,60.2,Average
+S343,Student_343,42.1,34.2,7.0,60.8,Average
+S344,Student_344,60.4,96.9,6.0,72.9,Excellent
+S345,Student_345,57.9,31.9,6.1,96.0,Average
+S346,Student_346,73.1,53.2,3.7,46.8,Average
+S347,Student_347,74.5,26.8,3.1,38.5,At Risk
+S348,Student_348,33.2,99.7,3.3,43.8,Average
+S349,Student_349,56.2,60.2,7.9,92.1,Excellent
+S350,Student_350,73.8,67.6,0.8,75.2,Average
+S351,Student_351,65.2,25.4,7.0,50.0,Average
+S352,Student_352,90.0,80.0,4.8,87.1,Excellent
+S353,Student_353,76.1,36.8,3.8,90.3,Average
+S354,Student_354,41.4,91.8,5.9,89.3,Excellent
+S355,Student_355,34.9,36.4,4.2,94.3,At Risk
+S356,Student_356,75.0,35.3,7.1,47.7,Average
+S357,Student_357,31.9,22.9,7.3,82.9,Average
+S358,Student_358,71.0,57.8,3.7,62.2,Average
+S359,Student_359,95.8,65.2,2.6,88.9,Excellent
+S360,Student_360,70.3,25.3,4.9,81.0,Average
+S361,Student_361,57.2,82.0,7.3,84.4,Excellent
+S362,Student_362,75.0,56.3,2.1,75.9,Average
+S363,Student_363,62.1,62.0,5.2,42.4,Average
+S364,Student_364,68.2,55.3,5.2,68.2,Average
+S365,Student_365,95.9,52.1,6.0,98.9,Excellent
+S366,Student_366,57.0,64.8,1.5,95.6,Average
+S367,Student_367,97.3,32.4,5.9,33.0,Average
+S368,Student_368,93.4,34.6,7.3,41.5,Average
+S369,Student_369,43.7,88.9,1.8,39.2,Average
+S370,Student_370,34.9,95.7,2.3,80.8,Average
+S371,Student_371,37.1,49.9,7.8,87.2,Average
+S372,Student_372,31.3,41.7,1.9,44.9,At Risk
+S373,Student_373,36.6,71.5,6.9,65.4,Average
+S374,Student_374,77.8,52.7,4.2,88.8,Average
+S375,Student_375,35.0,22.0,2.4,81.3,At Risk
+S376,Student_376,52.3,32.5,7.0,68.0,Average
+S377,Student_377,89.1,77.3,3.8,71.3,Excellent
+S378,Student_378,31.6,72.7,4.4,65.6,Average
+S379,Student_379,87.0,22.2,3.2,50.8,Average
+S380,Student_380,49.7,37.8,4.9,69.6,Average
+S381,Student_381,38.3,38.5,1.7,78.2,At Risk
+S382,Student_382,78.8,73.8,3.4,91.1,Excellent
+S383,Student_383,74.0,21.6,7.8,74.5,Average
+S384,Student_384,91.4,28.3,2.4,83.3,Average
+S385,Student_385,81.5,84.0,5.4,41.2,Excellent
+S386,Student_386,86.2,34.3,2.9,62.3,Average
+S387,Student_387,49.7,72.2,6.3,30.7,Average
+S388,Student_388,42.4,39.1,1.5,47.3,At Risk
+S389,Student_389,82.5,28.0,7.8,80.9,Average
+S390,Student_390,86.5,39.5,3.9,99.4,Average
+S391,Student_391,99.3,77.8,2.3,36.9,Excellent
+S392,Student_392,58.9,88.5,1.1,58.1,Average
+S393,Student_393,56.0,86.4,1.8,86.0,Average
+S394,Student_394,84.3,51.8,4.4,44.3,Average
+S395,Student_395,53.9,73.4,3.0,68.9,Average
+S396,Student_396,95.2,36.4,6.7,81.3,Excellent
+S397,Student_397,90.1,43.5,3.7,73.1,Average
+S398,Student_398,60.0,91.7,2.4,43.2,Average
+S399,Student_399,82.6,21.0,5.1,54.9,Average
+S400,Student_400,82.8,26.8,5.8,84.9,Average
+S401,Student_401,37.2,36.6,1.8,68.8,At Risk
+S402,Student_402,93.2,22.1,1.8,30.4,At Risk
+S403,Student_403,65.4,34.5,0.8,83.3,At Risk
+S404,Student_404,87.9,66.6,6.0,32.5,Excellent
+S405,Student_405,52.4,53.7,5.5,82.2,Average
+S406,Student_406,92.7,91.4,4.1,44.2,Excellent
+S407,Student_407,57.2,85.4,6.8,97.1,Excellent
+S408,Student_408,30.8,47.3,6.5,55.8,Average
+S409,Student_409,93.4,40.8,4.9,52.9,Average
+S410,Student_410,36.4,50.4,7.0,40.4,Average
+S411,Student_411,52.4,67.2,2.0,51.4,Average
+S412,Student_412,96.5,41.4,1.3,91.4,Average
+S413,Student_413,96.5,69.9,2.5,99.7,Excellent
+S414,Student_414,70.1,52.8,0.9,55.8,Average
+S415,Student_415,74.2,64.2,4.5,61.4,Average
+S416,Student_416,61.4,54.9,7.5,80.5,Excellent
+S417,Student_417,50.5,43.6,0.8,92.0,At Risk
+S418,Student_418,53.0,95.9,1.4,71.5,Average
+S419,Student_419,77.1,81.1,3.9,57.4,Excellent
+S420,Student_420,82.7,31.2,7.5,58.9,Average
+S421,Student_421,85.4,89.5,2.9,78.7,Excellent
+S422,Student_422,85.3,59.0,4.3,30.2,Average
+S423,Student_423,36.4,91.6,0.8,73.4,Average
+S424,Student_424,64.6,84.0,1.6,54.9,Average
+S425,Student_425,34.0,54.0,7.9,85.6,Average
+S426,Student_426,68.5,21.8,7.7,36.5,Average
+S427,Student_427,60.9,41.5,0.5,71.2,At Risk
+S428,Student_428,92.1,63.3,7.6,63.7,Excellent
+S429,Student_429,54.6,70.7,5.3,75.0,Excellent
+S430,Student_430,38.2,40.6,7.0,34.5,Average
+S431,Student_431,40.0,31.1,3.9,70.6,At Risk
+S432,Student_432,83.3,86.8,4.4,69.3,Excellent
+S433,Student_433,73.3,98.8,4.2,69.2,Excellent
+S434,Student_434,37.1,62.1,5.5,72.2,Average
+S435,Student_435,35.9,33.7,1.5,77.4,At Risk
+S436,Student_436,79.1,41.8,0.7,86.3,Average
+S437,Student_437,35.1,21.5,2.8,48.9,At Risk
+S438,Student_438,87.5,93.1,5.8,87.8,Excellent
+S439,Student_439,79.4,29.4,2.0,64.9,Average
+S440,Student_440,35.7,66.1,5.6,35.4,Average
+S441,Student_441,35.9,41.9,7.8,34.1,Average
+S442,Student_442,99.1,64.3,1.2,53.4,Average
+S443,Student_443,56.2,72.1,5.5,84.9,Excellent
+S444,Student_444,55.9,86.4,3.8,79.5,Excellent
+S445,Student_445,86.9,36.5,7.0,85.2,Excellent
+S446,Student_446,96.3,20.9,1.8,66.2,Average
+S447,Student_447,99.0,31.0,5.7,60.8,Average
+S448,Student_448,82.7,92.0,6.8,40.3,Excellent
+S449,Student_449,56.3,89.9,7.6,53.0,Excellent
+S450,Student_450,35.8,67.8,5.6,60.4,Average
+S451,Student_451,84.4,68.0,4.2,36.2,Excellent
+S452,Student_452,69.1,73.2,5.1,45.4,Excellent
+S453,Student_453,59.7,34.0,7.0,71.9,Average
+S454,Student_454,93.4,93.2,4.8,81.5,Excellent
+S455,Student_455,37.8,53.5,0.7,99.9,At Risk
+S456,Student_456,64.5,50.7,7.5,95.3,Excellent
+S457,Student_457,30.8,61.5,5.7,75.0,Average
+S458,Student_458,62.8,23.8,5.6,59.5,Average
+S459,Student_459,33.9,33.3,2.1,74.5,At Risk
+S460,Student_460,38.3,79.0,5.4,85.0,Average
+S461,Student_461,38.2,26.6,3.5,38.3,At Risk
+S462,Student_462,75.4,68.3,5.4,58.7,Excellent
+S463,Student_463,82.2,39.6,1.3,88.8,Average
+S464,Student_464,70.8,51.1,5.4,56.9,Average
+S465,Student_465,97.4,43.1,8.0,70.0,Excellent
+S466,Student_466,56.2,48.5,0.9,71.1,At Risk
+S467,Student_467,50.0,77.5,7.8,42.9,Excellent
+S468,Student_468,90.8,43.8,3.6,55.4,Average
+S469,Student_469,45.7,65.3,7.0,53.4,Average
+S470,Student_470,97.4,58.1,6.4,31.8,Excellent
+S471,Student_471,30.9,73.1,4.8,31.7,Average
+S472,Student_472,97.9,94.9,6.0,88.2,Excellent
+S473,Student_473,33.0,78.6,7.1,49.1,Average
+S474,Student_474,92.4,37.2,3.5,66.3,Average
+S475,Student_475,66.9,22.5,3.0,50.9,At Risk
+S476,Student_476,99.5,41.0,5.5,95.8,Excellent
+S477,Student_477,35.2,67.6,6.6,48.2,Average
+S478,Student_478,68.8,24.1,6.2,60.1,Average
+S479,Student_479,97.9,59.7,6.5,91.1,Excellent
+S480,Student_480,66.6,67.7,3.8,88.9,Average
+S481,Student_481,74.1,46.7,6.6,43.0,Average
+S482,Student_482,78.7,81.7,1.4,86.2,Excellent
+S483,Student_483,61.8,28.5,4.6,62.1,Average
+S484,Student_484,73.9,26.0,0.5,63.8,At Risk
+S485,Student_485,70.9,78.3,2.9,39.3,Average
+S486,Student_486,93.1,59.6,3.2,35.6,Average
+S487,Student_487,33.2,75.1,3.5,81.0,Average
+S488,Student_488,49.7,54.8,5.7,64.8,Average
+S489,Student_489,96.5,39.7,3.4,60.6,Average
+S490,Student_490,92.3,85.5,3.9,81.1,Excellent
+S491,Student_491,61.9,84.0,2.3,83.6,Average
+S492,Student_492,73.4,75.6,3.3,41.1,Average
+S493,Student_493,49.4,41.8,2.2,72.7,At Risk
+S494,Student_494,43.2,67.2,1.0,39.5,At Risk
+S495,Student_495,62.5,48.9,5.0,82.6,Average
+S496,Student_496,54.7,27.3,5.5,76.0,Average
+S497,Student_497,70.9,93.4,5.1,97.0,Excellent
+S498,Student_498,35.4,30.9,4.0,34.8,At Risk
+S499,Student_499,98.2,96.0,3.3,34.0,Excellent
+S500,Student_500,99.0,55.7,7.0,49.8,Excellent
