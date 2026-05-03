@@ -1,5 +1,4 @@
 # 🎓 Student Performance Prediction System
-### Software Engineering 
 **Team:** Vikirna Majumdar & Akanksha Semwal
 
 ---
