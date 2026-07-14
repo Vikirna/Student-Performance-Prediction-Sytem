@@ -31,7 +31,7 @@ Educational institutions often struggle to identify at-risk students before it i
 
 -  Role-based login — Student, Teacher, Admin
 -  Student dashboard with performance prediction and confidence score
--  Grade trend charts generated with Matplotlib
+-  Grade trend charts generated with Matplotlib (simulated trend data for demo — real deployment would pull historical grades from a DB)
 -  Early warning alerts for At Risk students with recommended actions
 -  CSV upload for batch prediction (Teacher)
 -  Class-wide prediction report with bar chart
